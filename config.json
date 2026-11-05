@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Healthy endpoint",
+    "url": "https://httpbin.org/status/200",
+    "expectedStatus": 200,
+    "timeout": 5000
+  },
+  {
+    "name": "Failing endpoint (demo)",
+    "url": "https://httpbin.org/status/500",
+    "expectedStatus": 200,
+    "timeout": 5000
+  },
+  {
+    "name": "Slow endpoint (timeout demo)",
+    "url": "https://httpbin.org/delay/10",
+    "expectedStatus": 200,
+    "timeout": 3000
+  },
+  {
+    "name": "Authenticated endpoint (example)",
+    "url": "https://httpbin.org/bearer",
+    "expectedStatus": 200,
+    "timeout": 5000,
+    "headers": {
+      "Authorization": "Bearer ${API_TOKEN}"
+    }
+  }
+]
